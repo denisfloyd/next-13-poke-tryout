@@ -10,9 +10,7 @@ export default function Page() {
   return (
     <section className="w-screen h-screen">
       <aside className="flex flex-col h-full items-center justify-center">
-        <h2 className="mb-4">
-          Click in a card to see a pokemon&apos;s details
-        </h2>
+        <h2 className="mb-4">Click in a card to see pokemon&apos;s details</h2>
 
         <Suspense
           fallback={

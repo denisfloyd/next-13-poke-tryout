@@ -5,10 +5,13 @@ import PokemonEvolutionList from "../_components/pokemon-evolution-list";
 import { Suspense } from "react";
 import { SkeletonCard } from "@/components/skeleton-card";
 
+export const dynamic = "auto";
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamicparams
 export const dynamicParams = true;
+// https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#fetchcache
+// export const fetchCache = "force-cache";
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
-export const revalidate = 60;
+export const revalidate = 5;
 
 export async function generateStaticParams() {
   // Generate two pages at build time and the rest (3-100) on-demand

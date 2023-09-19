@@ -15,7 +15,7 @@ export async function PokemonRandomStartList({ pokemonRandomIds }: Props) {
         }
       );
       return new Promise((resolve) =>
-        setTimeout(() => resolve(pokemonData.json()), 2000)
+        setTimeout(() => resolve(pokemonData.json()), 1000)
       );
     })
   );
