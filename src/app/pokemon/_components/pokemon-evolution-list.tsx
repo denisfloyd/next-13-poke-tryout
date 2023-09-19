@@ -35,7 +35,7 @@ export default async function PokemonEvolutionList({
   const response = await Promise.all(
     pokemonEvolutionChainIds.map(
       async (pokemonId) =>
-        await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+        await fetch(`${process.env.POKE_API_URL}/pokemon/${pokemonId}`)
     )
   );
   const pokemons = (await Promise.all(

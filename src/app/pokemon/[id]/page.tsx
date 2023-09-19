@@ -23,8 +23,8 @@ export default async function Pokemon({
   };
 }) {
   const response = await Promise.all([
-    fetch(`https://pokeapi.co/api/v2/pokemon/${params.id}`),
-    fetch(`https://pokeapi.co/api/v2/pokemon-species/${params.id}`),
+    fetch(`${process.env.POKE_API_URL}/pokemon/${params.id}`),
+    fetch(`${process.env.POKE_API_URL}/pokemon-species/${params.id}`),
   ]);
 
   const [pokemon, pokemonSpecies] = [

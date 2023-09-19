@@ -9,7 +9,7 @@ export async function PokemonRandomStartList({ pokemonRandomIds }: Props) {
   const randomPokemonList: Pokemon[] = await Promise.all(
     pokemonRandomIds.map(async (id) => {
       const pokemonData = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${id}`,
+        `${process.env.POKE_API_URL}/pokemon/${id}`,
         {
           cache: "no-cache",
         }
